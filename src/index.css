@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhaijaan+2:wght@400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+*{
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+}
+
+body{
+  scroll-behavior: smooth;
+}
+
+.cairo {
+  font-family: "Baloo Bhaijaan 2", sans-serif;
+}
+
+@font-face {
+  font-family: "Press Style Serif";
+  src: url("../public/fonts/PressStyleSerif.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font-press {
+  font-family: "Press Style Serif", serif;
+}
+
+::-webkit-scrollbar{
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: rgb(255 95 0);
+  border-radius: 10px;
+}
+
+@layer components{
+  .container{
+    @apply pl-[20px] pr-[20px]
+  }
+
+  .sticky{
+    @apply fixed top-[120px] right-0 left-0 w-full
+  }
+
+  .sideBar.active{
+    @apply translate-x-0
+  }
+
+  .sideBar.active .over-lay{
+    @apply block
+  }
+
+  .nav-btn {
+    @apply text-[16px] font-bold capitalize flex items-center border-b-[1px] border-solid border-b-lightGray pb-3
+  }
+
+  .checkout-box{
+    @apply bg-lightGray rounded-sm p-5
+  }
+
+  .label{
+    @apply block mb-2 capitalize font-medium
+  }
+
+  .input-box{
+    @apply bg-Whitee rounded-sm border-[1px] border-solid border-gray-300 p-2 w-full
+  }
+
+  .input-radio{
+    @apply appearance-none w-3 h-3 border-[2px] border-solid border-orangee rounded-full checked:bg-orangee mr-1
+  }
+
+  .radio-label{
+    @apply capitalize text-[16px] font-medium w-full p-2 bg-Whitee rounded-sm block cursor-pointer
+  }
+
+  .payment-nested-box{
+    @apply bg-lightGray rounded-sm p-5
+  }
+
+  .sidebar-border{
+    @apply border-t-[1px] border-dashed border-gray-400
+  }
+
+  .btn{
+    @apply w-full rounded-sm uppercase mt-5 border-[1px] border-solid border-orangee flex gap-1 justify-center items-center font-bold text-sm py-3
+  }
+
+  .content-btn{
+    @apply uppercase text-[rgba(255,255,255,.6)] font-semibold
+  }
+
+  .large-circle{
+    @apply block w-[40px] h-[40px] relative rounded-full border-[5px] border-solid border-orangee bg-black
+  }
+
+  .small-circle{
+    @apply block w-[25px] h-[25px] absolute rounded-full border-[5px] border-solid border-orangee bg-black left-[50%] top-[50%] -translate-x-1/2 -translate-y-1/2
+  }
+}
