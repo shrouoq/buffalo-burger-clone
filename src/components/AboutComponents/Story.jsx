@@ -1,5 +1,5 @@
 // ******Pics******
-import Jack from '../../assets/BM-jack.webp';
+import Jack from '../../assets/BM-Jack.webp';
 import Keto from '../../assets/Keto.png';
 import Branches from '../../assets/44-branches.png';
 import Time from '../../assets/Since-2008.png';
